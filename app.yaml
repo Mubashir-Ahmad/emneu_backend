@@ -1,0 +1,16 @@
+runtime: nodejs16
+
+instance_class: F2
+
+env_variables:
+  NODE_ENV: 'production'
+  STRIPE_API_KEY: 'pk_test_51OsorFLCiZBY1uWqig8h5xEbE1KS6otosGiSVjd4TmnVxBk2dNHk44fNkd4L3IvOqREcsKpJYl2qTm7AVxCF5FLL00RF0dIAQO'
+  STRIPE_SECRET_KEY: 'sk_test_51OsorFLCiZBY1uWqDOT7FHViCSvexUHgc0xZaXJU7NKH2vhPGbokyTSCP53KN2DcySzuyhTbJ1yC5nggkZjpRnw300HlRL2YHx'
+  # Add any other environment variables here
+
+handlers:
+  - url: /static
+    static_dir: build/static
+
+  - url: /.*
+    script: auto
